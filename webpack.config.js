@@ -1,11 +1,11 @@
 const { NexePlugin } = require('nexe-webpack-plugin');
-const { join } = require('path');
+const { resolve } = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: join(__dirname, 'entry.js'),
+  entry: './entry.js',
   output: {
-    path: join(__dirname, 'build'),
+    path: resolve(__dirname, 'build'),
   },
   plugins: [
     new NexePlugin({
